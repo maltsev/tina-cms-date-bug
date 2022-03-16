@@ -148,6 +148,7 @@ export type Docs = {
   __typename?: 'Docs';
   title?: Maybe<Scalars['String']>;
   section?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['String']>;
   body?: Maybe<Scalars['JSON']>;
 };
 
@@ -223,27 +224,29 @@ export type DocumentMutation = {
 export type DocsMutation = {
   title?: InputMaybe<Scalars['String']>;
   section?: InputMaybe<Scalars['String']>;
+  date?: InputMaybe<Scalars['String']>;
   body?: InputMaybe<Scalars['JSON']>;
 };
 
-export type DocsPartsFragment = { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, body?: any | null | undefined };
+export type DocsPartsFragment = { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, date?: string | null | undefined, body?: any | null | undefined };
 
 export type GetDocsDocumentQueryVariables = Exact<{
   relativePath: Scalars['String'];
 }>;
 
 
-export type GetDocsDocumentQuery = { __typename?: 'Query', getDocsDocument: { __typename?: 'DocsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, body?: any | null | undefined } } };
+export type GetDocsDocumentQuery = { __typename?: 'Query', getDocsDocument: { __typename?: 'DocsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, date?: string | null | undefined, body?: any | null | undefined } } };
 
 export type GetDocsListQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetDocsListQuery = { __typename?: 'Query', getDocsList: { __typename?: 'DocsConnection', totalCount: number, edges?: Array<{ __typename?: 'DocsConnectionEdges', node?: { __typename?: 'DocsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, body?: any | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
+export type GetDocsListQuery = { __typename?: 'Query', getDocsList: { __typename?: 'DocsConnection', totalCount: number, edges?: Array<{ __typename?: 'DocsConnectionEdges', node?: { __typename?: 'DocsDocument', id: string, sys: { __typename?: 'SystemInfo', filename: string, basename: string, breadcrumbs: Array<string>, path: string, relativePath: string, extension: string }, data: { __typename?: 'Docs', title?: string | null | undefined, section?: string | null | undefined, date?: string | null | undefined, body?: any | null | undefined } } | null | undefined } | null | undefined> | null | undefined } };
 
 export const DocsPartsFragmentDoc = gql`
     fragment DocsParts on Docs {
   title
   section
+  date
   body
 }
     `;

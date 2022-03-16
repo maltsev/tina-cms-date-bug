@@ -1,5 +1,6 @@
 fragment DocsParts on Docs {
   title
   section
+  date
   body
 }

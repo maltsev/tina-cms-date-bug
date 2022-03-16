@@ -32,6 +32,15 @@
           ]
         },
         {
+          "type": "datetime",
+          "label": "Date",
+          "name": "date",
+          "namespace": [
+            "docs",
+            "date"
+          ]
+        },
+        {
           "type": "rich-text",
           "label": "Body",
           "name": "body",

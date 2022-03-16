@@ -19,6 +19,11 @@ export default defineSchema({
           name: "section",
         },
         {
+          type: 'datetime',
+          label: 'Date',
+          name: 'date',
+        },
+        {
           type: "rich-text",
           label: "Body",
           name: "body",

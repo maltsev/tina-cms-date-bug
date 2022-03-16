@@ -1175,6 +1175,21 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
+            "value": "date"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
             "value": "body"
           },
           "arguments": [],
@@ -1800,6 +1815,20 @@
           "name": {
             "kind": "Name",
             "value": "section"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "date"
           },
           "type": {
             "kind": "NamedType",
